@@ -13,19 +13,19 @@ let eventSchema = new mongoose.Schema({
   },
   enrolled: {
     type: Number,
-  },
-  prizepoll: {
-    first: { type: Number, min: 0, required: true },
-    second: { type: Number, min: 0, required: true },
-    third: { type: Number, min: 0, required: true },
+    default: 0,
   },
   entryfee: {
-    Type: Number,
-    min: 0,
+    type: Number,
     required: true,
   },
-  format: {
-    type: String,
+  prize: {
+    type: Number,
+    required: true,
+  },
+  time: {
+    type: Date,
+    default: new Date(),
   },
 });
 

@@ -17,6 +17,10 @@ let userSchema = new mongoose.Schema({
     max: 30,
     required: true,
   },
+  isAdmin: {
+    type: Boolean,
+    default: false,
+  },
   events: [
     {
       type: mongoose.Schema.Types.ObjectId,
